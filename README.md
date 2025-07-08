@@ -6,7 +6,7 @@ Uma Single-Page Application (SPA) para uma loja de tickets de cinema, com foco n
 
 ## 🖼️ Visualização
 
-**
+![Pré-visualização do Ticket Online](screenshot.png)
 
 ## 🚀 Funcionalidades Principais
 
