@@ -22,7 +22,7 @@ const MovieDetails = () => {
       <img src={movie.imagem} alt={movie.nome} className="details-image" />
       <div className="details-info">
         <h1>{movie.nome}</h1>
-        <p><strong>Gênero:</strong> {movie.genero}</p>
+        <p><strong>Genero:</strong> {movie.genero}</p>
         <p><strong>Classificação:</strong> {movie.idadeIndicada === 0 ? 'Livre' : `${movie.idadeIndicada} anos`}</p>
         <p><strong>Sinopse:</strong> {movie.sinopse}</p>
         {/* Botão para voltar para a página anterior (lista de filmes) */}
