@@ -1,5 +1,5 @@
 // Ex 3 – Ticket Online: Componente Filme
-// Requisito: Criar componente de Filmes com nome, imagem, gênero, idade e botão.
+// Requisito: Criar componente de Filmes com nome, imagem, genero, idade e botão.
 
 import { Link } from "react-router-dom";
 import "./style.css"; // CSS para o card
@@ -8,7 +8,7 @@ interface Movie {
     id: number;
     nome: string;
     imagem: string;
-    gênero: string;
+    genero: string;
     idadeIndicada: number;
 }
 
@@ -26,7 +26,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
             />
             <div className="movie-card-body">
                 <h3>{movie.nome}</h3>
-                <p>Gênero: {movie.gênero}</p>
+                <p>Gênero: {movie.genero}</p>
                 <p>
                     Classificação:{" "}
                     {movie.idadeIndicada === 0
