@@ -6,12 +6,11 @@ import { mockMovies } from '../../../data/mockMovies';
 import './style.css';
 
 const MovieDetails = () => {
-  // Pega o 'id' da URL (ex: /filmes/1)
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Encontra o filme no nosso mock de dados pelo id
-  const movie = mockMovies.find((m) => m.id === parseInt(id ?? ''));
+  // Lógica de busca corrigida para mais segurança
+  const movie = mockMovies.find((m) => m.id === parseInt(id || '0'));
 
   if (!movie) {
     return <div>Filme não encontrado!</div>;
@@ -22,10 +21,10 @@ const MovieDetails = () => {
       <img src={movie.imagem} alt={movie.nome} className="details-image" />
       <div className="details-info">
         <h1>{movie.nome}</h1>
-        <p><strong>Genero:</strong> {movie.genero}</p>
+        {/* CORRETO: sem acento */}
+        <p><strong>Gênero:</strong> {movie.genero}</p>
         <p><strong>Classificação:</strong> {movie.idadeIndicada === 0 ? 'Livre' : `${movie.idadeIndicada} anos`}</p>
         <p><strong>Sinopse:</strong> {movie.sinopse}</p>
-        {/* Botão para voltar para a página anterior (lista de filmes) */}
         <button onClick={() => navigate(-1)} className="btn-back">
           Voltar
         </button>

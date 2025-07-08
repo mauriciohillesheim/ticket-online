@@ -2,14 +2,16 @@
 // Requisito: Criar componente de Filmes com nome, imagem, genero, idade e botão.
 
 import { Link } from "react-router-dom";
-import "./style.css"; // CSS para o card
+import "./style.css";
 
+// Interface atualizada para ser completa
 interface Movie {
     id: number;
     nome: string;
     imagem: string;
-    genero: string;
+    genero: string; // CORRETO: sem acento
     idadeIndicada: number;
+    sinopse: string; // ADICIONADO para consistência
 }
 
 interface MovieCardProps {
@@ -26,14 +28,13 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
             />
             <div className="movie-card-body">
                 <h3>{movie.nome}</h3>
-                <p>Gênero: {movie.genero}</p>
+                <p>Gênero: {movie.genero}</p> {/* CORRETO: sem acento */}
                 <p>
                     Classificação:{" "}
                     {movie.idadeIndicada === 0
                         ? "Livre"
                         : `${movie.idadeIndicada} anos`}
                 </p>
-                {/* O botão é um Link que leva para a página de detalhes daquele filme específico */}
                 <Link to={`/filmes/${movie.id}`} className="btn-details">
                     Ver mais informações
                 </Link>
