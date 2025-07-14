@@ -82,4 +82,3 @@ Após executar o último comando, o projeto estará disponível em `http://local
   * `npm run build`: Gera a versão de produção otimizada do projeto na pasta `dist/`.
   * `npm run lint`: Executa o linter (ESLint) para verificar a qualidade do código.
   * `npm run preview`: Inicia um servidor local para visualizar a versão de produção (após o build).
-
